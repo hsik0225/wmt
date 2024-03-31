@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:latest
+    platform: linux/arm64
+    command: "mysqld --character-set-server=utf8mb4"
+    environment:
+      MYSQL_ROOT_PASSWORD: local
+      MYSQL_DATABASE: wmt
+      MYSQL_USER: local
+      MYSQL_PASSWORD: local
+    ports:
+      - "3307:3306"
